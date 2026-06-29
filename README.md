@@ -1,27 +1,26 @@
-# 🚀 ApexHybrid-Analytics: Performance Analytics
+# 🚀 Apex Hybrid Analytics: Performance Intelligence
 
-ApexHybrid-Analytics is an end-to-end data project designed for athletes who balance **Strength Training (Gym)** and **Functional Endurance (Hyrox)**. 
+Apex Hybrid Analytics is an end-to-end data project designed for athletes balancing **Strength Training** and **Hyrox Functional Endurance**.
 
-This project tracks daily health metrics and performance data to provide personalized recovery advice and progress analytics.
-
-## 🛠 Current Version: V1 (The Daily Logger)
-In the first version, I have implemented a professional command-line interface to capture clean, validated data.
+## 🛠 Current Version: V2 (The Adaptive AI Coach)
+This version introduces **Adaptive Goal Re-balancing**, transforming the project from a simple logger into an intelligent performance management system.
 
 ### Key Features:
-- **Sequential Data Entry:** User-friendly flow (Name -> Steps -> Calories -> Water -> Workout Type -> Sleep).
-- **Data Validation:** Ensures all inputs are correctly formatted (Integers/Floats) to prevent "dirty data" for future ML models.
-- **Smart Feedback:** Real-time health tips based on water intake and sleep quality.
-- **CSV Storage:** Data is indexed by date to ensure seamless scaling for future versions.
+- **Identity Memory (JSON):** Remembers user profiles and base targets across sessions.
+- **AI Re-balancer:** Automatically calculates "Goal Deficits" (e.g., missed steps or water) and adjusts tomorrow's targets to maintain weekly averages.
+- **Dual-Stream Data:** Uses **CSV** for long-term historical logs and **JSON** for real-time state management.
+- **Smart Validation:** Sanitizes inputs (Name casing, Integer/Float checks) to ensure high-quality data for future modeling.
 
 ## 📂 Project Structure
-- `tracker.py`: The main application logic.
-- `tracker_data.csv`: Local database storing historical athlete data.
-- `.gitignore`: Configured to keep personal athlete data private.
+- `tracker.py`: Main application logic & AI Re-balancer.
+- `tracker_data.csv`: Historical performance database (Hidden).
+- `user_settings.json`: User profile and adaptive goal state (Hidden).
+- `.gitignore`: Ensures personal athlete data stays private.
 
 ## 📈 Roadmap
-- **Version 2:** Interactive Weekly Timetables (Planned vs. Actual).
 - **Version 3:** PowerBI-style Analytics Dashboard using Streamlit.
-- **Version 4:** ML-powered "AI Coach" for personalized workout advice.
+- **Version 4:** Machine Learning-powered "Hyrox Race Time" predictor.
 
 ---
-*Built with Python 🐍*
+### ⚖️ Legal Disclaimer
+This project is for educational and portfolio purposes only. The data and advice provided are not a substitute for professional medical or fitness consultation. "HYROX" is a trademark of its respective owners. This is an unofficial community project.
