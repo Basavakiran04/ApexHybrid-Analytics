@@ -1,32 +1,46 @@
-# 🚀 Apex Hybrid Analytics: Performance Intelligence Dashboard
+# 🏋️ Apex Hybrid Analytics – V6: The Coaching Engine
 
-Apex Hybrid Analytics is a professional end-to-end performance management platform designed for athletes balancing **Strength Training** and **Hyrox Functional Endurance**. 
-
-## 🛠 Current Version: V5 (The Weekly Master Edition)
-Version 5 expands the platform into a full **7-Day Strategic Management System**, featuring recursive AI logic to protect weekly performance averages.
-
-### 🌟 Key Engineering & AI Features:
-- **7-Day Strategic Blocks:** Athletes plan their full Monday-Sunday routine including specific Gym, Hybrid, and Rest days.
-- **Tiered AI Re-balancing (The 3000 Rule):**
-    - *Minor Deficits (< 3000 steps):* Distributed evenly across remaining days.
-    - *Heavy Deficits (> 3000 steps):* The AI recursively hunts for the next available "Rest Day" and moves the load there to protect workout intensity.
-- **Peak Performance Comparison:** The dashboard visualizes the current week against a "Best Week" shadow line, providing a benchmark to beat.
-- **Strategy Templates:** Users can reload their standard weekly routine to skip repetitive planning.
-- **Override Protection:** Warns users before cancelling an active block to prevent data corruption.
-- **Safety Gates:** Verification checkboxes prevent accidental submissions across Onboarding, Goal Setting, and Daily Logging.
-
-### 📂 Technical Stack
-- **Frontend:** Streamlit (Interactive Web Interface)
-- **Visualization:** Plotly (Comparative Line Charts)
-- **Data Handling:** Pandas (Time-Series calculations)
-- **Storage:** JSON (State Memory) & CSV (Historical Ledger)
-
-## 📈 Project Evolution
-- **V1 - V3:** Terminal-based data logging, AI baseline discovery, and 3-day blocks.
-- **V4:** Migration to Streamlit Web UI with a professional dashboard and hardened UX.
-- **V5:** Full 7-Day Weekly Blocks, Recursive AI logic, and Historical Comparisons.
-- **V6 (Upcoming):** Specific exercise tracking (Bench Press, Hyrox Splits) for progressive overload analysis.
+A **personalized fitness intelligence platform** for Hybrid (Hyrox-style) and Gym athletes. Built with Python + Streamlit, this app combines adaptive AI logic with a professional dashboard to help athletes plan, track, and optimize their weekly performance.
 
 ---
-### ⚖️ Legal Disclaimer
-Educational and portfolio purposes only. Not medical advice. "HYROX" is a trademark of its respective owners.
+
+## 🚀 What's New in V6
+
+Version 6 transforms Apex Hybrid Analytics from a **tracker** into a **coaching engine**. This version introduces:
+
+### 🎯 2-Step Goal Setter Wizard
+- **Section 1: Base Plan** – Set 7-day targets in an Excel-style table (Steps, Water, Workout Type).
+- **Section 2: Exercise Details** – Add specific exercises for Gym/Hybrid days via smart dropdowns with custom typing support.
+- **Smart Validations** – Blocks all-Rest or no-Rest plans to ensure balanced weeks.
+- **Edit Flow** – Grayed-out summary + "Edit Base Plan" button that auto-clears outdated exercise details.
+
+### 📅 Custom Start Date
+- Users can pick **any start date** for their 7-day plan — no more assuming "today = Day 1."
+
+### 🏋️ Progressive Overload Tracking
+- Separate `workout_data.csv` stores detailed exercise logs.
+- Dashboard displays the **last logged exercise** with progression suggestions.
+
+### 💧 AI Water Suggestion Formula
+- Base: 3.5L
+- +0.5L on Gym/Hybrid days
+- +0.5L if previous sleep was <6 hours
+
+### 📊 7-Day Plan Overview in Checklist
+- Full weekly plan displayed as a clean table with status indicators:
+  - ✅ Today
+  - ✔️ Done
+  - ⏳ Upcoming
+
+### 🔀 Missed Workout Auto-Shift
+- If a user skips a Gym/Hybrid workout, the AI moves it to the next available Rest day.
+- If no Rest day is available, it's logged as "Missed" in the report history.
+
+### 🎨 Enhanced UX
+- **Custom exercise input** (comma-separated) alongside preset dropdowns.
+- **Grayed-out state** for saved base plans (prevents accidental edits).
+- **Override warning** appears only when locking a new strategy (not upfront).
+
+---
+
+## 📁 Project Structure
