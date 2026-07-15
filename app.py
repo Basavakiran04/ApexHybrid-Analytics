@@ -353,8 +353,11 @@ else:
     # --- TAB 4: DAILY LOG ---
     with tab4:
         st.header("End-of-Day Update")
-        if wait > 0: st.error(f"Access Denied: Please wait {format_wait_time(wait)}.")
+        if settings["block_active"] and wait > 0: st.error(f"Access Denied: Please wait {format_wait_time(wait)}.")
         else:
+            if not settings["block_active"]:
+                st.info("ℹ️ No active 7-day block. You can still log your daily stats, or set a new plan in the Goal Setter tab.")
+                
             with st.form("daily_update"):
                 s_act = st.number_input("Actual Steps", value=None, placeholder="Enter steps...")
                 c_act = st.number_input("Actual Calories", value=None, placeholder="Enter calories...")
